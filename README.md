@@ -1,4 +1,4 @@
-# Flask server to feed images from OpenCV
+# Flask server with optional ON CLICK  feed images from OpenCV
 
 This code can also run on Raspberry Pi as a security camera running open-cv. Also with the use of ngrok you can feed the live stream of the localhost to the Internet.
 
@@ -20,9 +20,16 @@ chmod +x install-opencv.sh
 
 Run the program
 
+
+
 ```Open the terminal and run
-sudo python3 main.py
+python3 camera.py
+python3 flask_class.py 
 ```
+to run server, go to /Monitoring and click on ShowVideo to start streaming from camera.py
+
 
 To view the live stream on a different network than your Raspberry Pi or PC, you can use [ngrok](https://ngrok.com/) to expose a local tunnel. To run ngrok with `./ngrok http 5000` and visit one of the generated links in your browser.
 
+Know bugs. Does not work in Firefox 
+	   Must do click on TurnOFf video before close the webpage
